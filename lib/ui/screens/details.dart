@@ -35,7 +35,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
             padding: const EdgeInsets.all(15.0),
             child: Text(
               "Folders",
-              style: Theme.of(context).textTheme.display1.apply(
+              style: Theme.of(context).textTheme.headlineMedium?.apply(
                     color: Colors.white,
                     fontWeightDelta: 2,
                   ),
@@ -62,7 +62,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                         underline: Container(),
                         onChanged: (i) {
                           setState(() {
-                            _active = i;
+                            _active = i!;
                           });
                         },
                         items: [
@@ -112,7 +112,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                             }
                         }
                         return ListTile(
-                          onTap: (){},
+                          onTap: () {},
                           leading: Image.asset(image),
                           title: Text("${foldersList[i]['name']}"),
                           subtitle: Text(

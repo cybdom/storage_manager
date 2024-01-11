@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
                     Spacer(),
                     Text(
                       "Folders",
-                      style: Theme.of(context).textTheme.display1.apply(
+                      style: Theme.of(context).textTheme.headlineMedium?.apply(
                             color: Colors.white,
                             fontWeightDelta: 2,
                           ),
@@ -58,7 +58,7 @@ class HomeScreen extends StatelessWidget {
                               children: <Widget>[
                                 Text(
                                   "Storage",
-                                  style: Theme.of(context).textTheme.title,
+                                  style: Theme.of(context).textTheme.titleLarge,
                                 ),
                                 Text(
                                   "51GB of 63GB Used",
@@ -179,12 +179,13 @@ class HomeScreen extends StatelessWidget {
                       children: <Widget>[
                         Text(
                           "Recent Files",
-                          style: Theme.of(context).textTheme.display1.apply(
-                                color: Color(0xff0b1666),
-                                fontWeightDelta: 2,
-                              ),
+                          style:
+                              Theme.of(context).textTheme.headlineMedium?.apply(
+                                    color: Color(0xff0b1666),
+                                    fontWeightDelta: 2,
+                                  ),
                         ),
-                        FlatButton(
+                        TextButton(
                           child: Text(
                             "View All",
                             style: TextStyle(color: Colors.blue),
